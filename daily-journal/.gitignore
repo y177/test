@@ -1,0 +1,10 @@
+node_modules/
+.env
+entries/
+logs/
+*.log
+.DS_Store
+.claude/settings.local.json
+
+# 개인 일기는 기본적으로 git에서 제외
+# 원하면 entries/를 커밋할 수 있음

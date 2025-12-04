@@ -1,0 +1,30 @@
+{
+  "name": "notion-manager",
+  "version": "1.0.0",
+  "description": "Notion 파일 생성 및 관리를 위한 자동화 도구",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "sync": "node src/sync.js",
+    "create-page": "node src/create-page.js",
+    "backup": "node src/backup.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "notion",
+    "automation",
+    "productivity",
+    "file-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5",
+    "markdown-it": "^14.1.0",
+    "notion-to-md": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

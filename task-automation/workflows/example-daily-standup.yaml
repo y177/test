@@ -1,0 +1,35 @@
+name: "Daily Standup Report"
+description: "일일 스탠드업 리포트 자동 생성 및 전송"
+schedule: "0 9 * * 1-5"  # 평일 오전 9시
+
+triggers:
+  - type: schedule
+  - type: manual
+
+steps:
+  - name: "GitHub Issues 확인"
+    action: github.getIssues
+    params:
+      state: open
+      assignee: "@me"
+      labels: ["in-progress"]
+
+  - name: "리포트 템플릿 렌더링"
+    action: template.render
+    params:
+      template: standup.md
+      data:
+        issues: "{{ steps.0.output }}"
+        date: "{{ today }}"
+
+  - name: "Slack 채널에 전송"
+    action: slack.sendMessage
+    params:
+      channel: "#standup"
+      message: "{{ steps.1.output }}"
+    onError: continue
+
+  - name: "완료 로그"
+    action: script.run
+    params:
+      command: "echo 'Standup report sent successfully'"
