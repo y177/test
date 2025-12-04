@@ -1,0 +1,35 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "description": "개인 재무 추적 및 예산 관리 도구",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "add-expense": "node src/add-expense.js",
+    "add-income": "node src/add-income.js",
+    "report": "node src/generate-report.js",
+    "budget": "node src/budget-manager.js",
+    "stats": "node src/stats.js",
+    "export": "node src/export.js"
+  },
+  "keywords": [
+    "finance",
+    "budget",
+    "expense-tracker",
+    "personal-finance",
+    "money-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^9.3.0",
+    "chalk": "^4.1.2",
+    "csv-writer": "^1.6.0",
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

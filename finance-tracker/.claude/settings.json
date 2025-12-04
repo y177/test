@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": ["Read", "Edit", "Write", "Bash", "Skill"]
+  },
+  "env": {
+    "DATA_DIR": "${DATA_DIR:-./data}",
+    "REPORTS_DIR": "${REPORTS_DIR:-./reports}",
+    "CURRENCY": "${CURRENCY:-KRW}"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '💰 Finance Tracker 프로젝트에 오신 것을 환영합니다!'"
+          },
+          {
+            "type": "command",
+            "command": "npm install --silent"
+          }
+        ]
+      }
+    ]
+  }
+}

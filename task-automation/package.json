@@ -1,0 +1,34 @@
+{
+  "name": "task-automation",
+  "version": "1.0.0",
+  "description": "개인 작업 자동화 및 생산성 도구",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "workflow": "node src/run-workflow.js",
+    "schedule": "node src/scheduler.js",
+    "list": "node src/list-tasks.js",
+    "run": "node src/run-task.js",
+    "daemon": "node src/daemon.js"
+  },
+  "keywords": [
+    "automation",
+    "workflow",
+    "scheduler",
+    "productivity",
+    "task-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.0",
+    "node-cron": "^3.0.3",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

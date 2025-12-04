@@ -1,0 +1,33 @@
+{
+  "name": "obsidian-vault",
+  "version": "1.0.0",
+  "description": "Obsidian vault 파일 생성 및 관리 자동화 도구",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "daily": "node src/daily-note.js",
+    "organize": "node src/organize.js",
+    "link-check": "node src/link-checker.js",
+    "backup": "node src/backup.js",
+    "stats": "node src/stats.js"
+  },
+  "keywords": [
+    "obsidian",
+    "markdown",
+    "knowledge-management",
+    "note-taking",
+    "pkm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "glob": "^10.3.10",
+    "marked": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "date-fns": "^3.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
