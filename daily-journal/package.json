@@ -1,0 +1,35 @@
+{
+  "name": "daily-journal",
+  "version": "1.0.0",
+  "description": "일일 저널 및 일기 자동화 도구",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "morning": "node src/morning-journal.js",
+    "evening": "node src/evening-journal.js",
+    "analyze": "node src/analyze.js",
+    "weekly-review": "node src/weekly-review.js",
+    "monthly-review": "node src/monthly-review.js",
+    "search": "node src/search.js"
+  },
+  "keywords": [
+    "journal",
+    "diary",
+    "daily-notes",
+    "mood-tracking",
+    "self-reflection"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
+    "front-matter": "^4.0.2",
+    "js-yaml": "^4.1.0",
+    "marked": "^12.0.0",
+    "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
