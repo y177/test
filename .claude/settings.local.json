@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm view ultra-mcp version)",
+      "Bash(curl -I https://cursor.sh)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
